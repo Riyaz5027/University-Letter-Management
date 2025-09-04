@@ -1,3 +1,4 @@
+// issue.h
 #pragma once
 #include <string>
 using namespace std;
@@ -10,11 +11,15 @@ public:
     string description;
     string status;
 
-    Issue(int id, string sid, string t, string d) {
+    Issue(int id, string sId, string t, string d) {
         issueId = id;
-        studentId = sid;
+        studentId = sId;
         title = t;
         description = d;
         status = "Pending";
+    }
+
+    void updateStatus(string newStatus) {
+        status = newStatus;
     }
 };

@@ -15,3 +15,16 @@
   - If Admin → show admin menu (add role, add user, list users)
   - If Student → show student menu (submit/view issue → to be done later)
   - If Faculty → show faculty menu (respond to issues → to be done later)
+
+
+
+  - Each Issue has:
+  - ID (auto increment)
+  - StudentID
+  - Title
+  - Description
+  - Status (Pending / Resolved)
+- Student Menu:
+  1. Submit Issue
+  2. View My Issues
+  3. Logout

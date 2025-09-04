@@ -12,6 +12,58 @@ using namespace std;
 void seedUsers();
 User *login(string id, string pass);
 
+
+
+
+void facultyMenu(User* faculty) {
+    int choice;
+    while (true) {
+        cout << "\n--- Faculty Menu ---\n";
+        cout << "1. View All Issues\n";
+        cout << "2. Update Issue Status\n";
+        cout << "3. Logout\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        if (choice == 1) {
+            cout << "\n--- All Issues ---\n";
+            for (auto &iss : issues) {
+                cout << "ID: " << iss.issueId 
+                     << " | Student: " << iss.studentId
+                     << " | Title: " << iss.title
+                     << " | Status: " << iss.status << endl;
+            }
+        }
+        else if (choice == 2) {
+            int id;
+            string newStatus;
+            cout << "Enter Issue ID to update: ";
+            cin >> id;
+            cout << "Enter new status (In Progress / Resolved / Signed): ";
+            cin.ignore();
+            getline(cin, newStatus);
+
+            bool found = false;
+            for (auto &iss : issues) {
+                if (iss.issueId == id) {
+                    iss.updateStatus(newStatus);
+                    cout << "✅ Status updated!\n";
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) cout << "❌ Issue not found!\n";
+        }
+        else if (choice == 3) {
+            cout << "Logging out...\n";
+            break;
+        }
+        else {
+            cout << "Invalid choice!\n";
+        }
+    }
+}
+
 void studentMenu(User *student)
 {
     int choice;
@@ -89,7 +141,7 @@ int main()
     }
     else if (loggedIn->role == "Faculty")
     {
-        cout << "Faculty Menu (to be built)" << endl;
+         facultyMenu(loggedIn);
     }
 
     else if (loggedIn->role == "Student")
