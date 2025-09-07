@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include "user.h"
+extern std::vector<User> users;
+
 using namespace std;
 
 vector<User> users;
