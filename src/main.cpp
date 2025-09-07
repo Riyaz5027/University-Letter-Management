@@ -12,6 +12,7 @@ using namespace std;
 void seedUsers();
 User *login(string id, string pass);
 
+void adminMenu(User* admin);
 
 
 
@@ -115,6 +116,47 @@ void studentMenu(User *student)
     }
 }
 
+void adminMenu(User* admin) {
+    int choice;
+    while (true) {
+        cout << "\n--- Admin Menu ---\n";
+        cout << "1. View All Users\n";
+        cout << "2. Add User\n";
+        cout << "3. Logout\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        if (choice == 1) {
+            cout << "\n--- All Users ---\n";
+            for (auto &u : users) {
+                cout << "ID: " << u.id 
+                     << " | Role: " << u.role << endl;
+            }
+        }
+        else if (choice == 2) {
+            string newId, newPass, newRole;
+            cout << "Enter new user ID: ";
+            cin >> newId;
+            cout << "Enter password: ";
+            cin >> newPass;
+            cout << "Enter role (Admin / Faculty / Student): ";
+            cin >> newRole;
+
+            users.push_back(User(newId, newPass, newRole));
+            cout << "✅ User added successfully!\n";
+        }
+        else if (choice == 3) {
+            cout << "Logging out...\n";
+            break;
+        }
+        else {
+            cout << "Invalid choice!\n";
+           
+        }
+    }
+}
+
+
 int main()
 {
     seedUsers();
@@ -137,7 +179,7 @@ int main()
 
     if (loggedIn->role == "Admin")
     {
-        cout << "Admin Menu (to be built)" << endl;
+        adminMenu(loggedIn);
     }
     else if (loggedIn->role == "Faculty")
     {
