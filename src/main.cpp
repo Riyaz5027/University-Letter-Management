@@ -122,7 +122,8 @@ void adminMenu(User* admin) {
         cout << "\n--- Admin Menu ---\n";
         cout << "1. View All Users\n";
         cout << "2. Add User\n";
-        cout << "3. Logout\n";
+        cout<< "3. Show system Info\n";
+        cout << "4. Logout\n";
         cout << "Enter choice: ";
         cin >> choice;
 
@@ -145,7 +146,11 @@ void adminMenu(User* admin) {
             users.push_back(User(newId, newPass, newRole));
             cout << "✅ User added successfully!\n";
         }
-        else if (choice == 3) {
+        else if (choice == 3)
+        {
+            cout << "System running with " << users.size() << " users and " << issues.size() << " issues.\n";
+        }
+        else if (choice == 4) {
             cout << "Logging out...\n";
             break;
         }
