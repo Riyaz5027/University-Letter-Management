@@ -1,3 +1,6 @@
+# About
+## This project is a prototype of a real world problem which we have observed in collges
+
 # University-Letter-Management
 
 ## Problem Identified from students - Whenever a student faces any issues in university he is instructed to write a letter to solve that issue and get sign from the Head of the department or respective department and get a sign and college stamp on it.Why because it is a proof that the student has faced this issue in real time, Which is kept in their respective desk which is used as a proof for faculty to not to face any false aligation from their respective senior or head
