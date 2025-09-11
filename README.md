@@ -1,5 +1,5 @@
 # About
-## This project is a prototype of a real world problem which we have observed in collges
+## This project is a prototype of a real world problem which we have observed in collges, The problem and Desired solutoin is discueed Below
 
 # University-Letter-Management
 
