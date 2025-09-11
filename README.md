@@ -23,7 +23,7 @@
 
 
 
-# - Suggested Solution: A way to streamline this entire process in online way and if there are so many students then the work can be shared among faculty as well this way
+# - Suggested Solution: A way to streamline this entire process in online way and if there are so many students then the work can be shared among faculty as well this way and student can submit letters to whatever faculty based on requirement and the faculty can view the issue can suggest proper solution for it
 
 
 
