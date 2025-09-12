@@ -1,0 +1,4 @@
+admin|admin123|Admin||Administrator
+S1001|pass123|Student|CSE|John Doe
+s1001|pass4456|Student|ECE|Jane Smith
+F2001|facpass|Faculty|CSE|Dr. Alice
